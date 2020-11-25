@@ -5,14 +5,7 @@ import { Component, OnInit } from '@angular/core';
 	// template: ` <app-server></app-server>
 	// 	<app-server></app-server>`,
 	templateUrl: './servers.component.html',
-	// styleUrls: ['./servers.component.css'],
-	styles: [
-		`
-			.logBig {
-				color: white;
-			}
-		`,
-	],
+	styleUrls: ['./servers.component.css'],
 })
 export class ServersComponent implements OnInit {
 	allowNewServer = false;
@@ -22,8 +15,7 @@ export class ServersComponent implements OnInit {
 	serverCreated = false;
 	servers = ['server 1', 'server 2'];
 	togglePassword = false;
-	list = [];
-	counter = 0;
+	log = [];
 
 	constructor() {
 		setTimeout(() => {
@@ -47,7 +39,6 @@ export class ServersComponent implements OnInit {
 	}
 	onClick() {
 		this.togglePassword = !this.togglePassword;
-		this.counter++;
-		this.list.push(this.counter);
+		this.log.push(new Date());
 	}
 }
