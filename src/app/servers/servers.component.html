@@ -1,0 +1,46 @@
+<!-- <button
+	class="btn btn-primary"
+	[disabled]="!allowNewServer"
+	(click)="onCreateServer()"
+>
+	Add Server
+</button> -->
+<!-- <p [innerText]="allowNewServer"></p> -->
+<!-- <p>{{ serverCreationStatus }}</p>
+
+<input type="text" class="form-control" (input)="onUpdateServerName($event)" />
+<input type="text" class="form-control" [(ngModel)]="serverName" />
+<p>{{ serverName }}</p>
+<app-server *ngFor="let server of servers"></app-server>
+
+<hr />
+<input class="form-control" type="text" [(ngModel)]="username" />
+
+<h3>{{ username }}</h3>
+<button
+	class="btn btn-danger"
+	[disabled]="!username"
+	(click)="onCleanUsername()"
+>
+	click
+</button>
+
+<p *ngIf="serverCreated; else noServer">
+	Server was created, server name is {{ serverName }}
+</p>
+<ng-template #noServer>
+	<p>No server was created!</p>
+</ng-template> -->
+<hr />
+<button (click)="onClick()">Display Details</button>
+<p *ngIf="togglePassword">Secret Password = tuna</p>
+<ol>
+	<li
+		*ngFor="let i of list"
+		[ngClass]="{ logBig: i > 4 }"
+		[ngStyle]="{ backgroundColor: i > 4 ? 'blue' : 'white' }"
+	>
+		{{ i }}
+	</li>
+</ol>
+<hr />
